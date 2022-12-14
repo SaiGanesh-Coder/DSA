@@ -14,6 +14,7 @@ int main(){
 
     for(int i=0;i<100;i++){
         cout<<"Size "<<v.size()<<endl;
+        cout<<"Size []"<<vp[0].size()<<endl;
         cout<<"Capacity "<<v.capacity()<<endl;
         v.push_back(i+1);
     }
