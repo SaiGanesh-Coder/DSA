@@ -12,13 +12,16 @@ void printArray(int S[],int n){
         cout<<S[i]<<"  ";
     }
 }
-void SelectionSort(int S[],int n){
-     for(int i=0;i<=n-1;i++){           // NO NEED TO COMPARE THE LAST ELEMENT as after the last element there is nothing to compare after that..
-        for(int j=0;j<=n-2-i;j++){        // START DIRECTLY FROM INDEX 1
-            if(S[j]>S[j+1]){
+void BubbleSort(int S[],int n){
+     for(int i=0;i<=n-1;i++){         
+            int flag=0;                  
+        for(int j=0;j<=n-2-i;j++){      
+             if(S[j]>S[j+1]){
                 swap(S[j+1],S[j]);
+                flag=1;
             }
         }
+            if(flag==0) break;        //array is already sorted
     }
 }
 int main(){
@@ -29,7 +32,7 @@ int main(){
     takeInput(S,n);
     cout<<"UnSorted Array : ";
     printArray(S,n);
-    SelectionSort(S,n);
+    BubbleSort(S,n);
     cout<<"\nSorted Array : ";
     printArray(S,n);
     return 0;

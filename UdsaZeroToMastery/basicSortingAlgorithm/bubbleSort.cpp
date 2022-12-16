@@ -13,15 +13,12 @@ void printArray(int S[],int n){
     }
 }
 void BubbleSort(int S[],int n){
-     for(int i=0;i<=n-1;i++){         
-            int flag=0;  
+     for(int i=0;i<=n-1;i++){           
         for(int j=0;j<=n-2-i;j++){      
              if(S[j]>S[j+1]){
                 swap(S[j+1],S[j]);
-                flag=1;
             }
         }
-            if(flag==0) break;        //array is already sorted
     }
 }
 int main(){
