@@ -109,7 +109,7 @@ void printHammingCode(int *hCode,int totalBitsSize){
     cout<<"\n";
 }
 int main(){
-    string d="1011001";
+    string d;
     cout<<"Enter the dataBits  : "<<endl;
     cin>>d;
     int dSize=d.size();
