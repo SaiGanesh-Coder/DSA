@@ -87,6 +87,7 @@ int XOR(int *XorValue,int totalBitsSize,int rSize,int Flag){
     if(rSize<4 && Flag==1) totalBitsSize+=1; 
     int xor_r1=0;
     for(int i=0;i<totalBitsSize/2;i++){
+        if(XorValue[i]<0) break;
         xor_r1^=XorValue[i];
         }
       return xor_r1;
@@ -139,7 +140,7 @@ int main(){
 
     int *BCD_r2 = BCD(totalBitsSize,2);
     int *r2XorArray = XORArray(BCD_r2,totalBitsSize,rSize);
-    int *r2XorValue = XORValues(hCode,r2XorArray,totalBitsSize,rSize);
+    int *r2XorValue = XORValues(hCode,r2XorArray,totalBitsSize,rSize); 
     int xor_r2 = XOR(r2XorValue,totalBitsSize,rSize,0);
     cout<<xor_r2;
 

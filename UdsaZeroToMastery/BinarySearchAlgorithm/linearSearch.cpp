@@ -14,7 +14,6 @@ void linearSearch(int S[],int key,int n){
             cout<<"The key is present at the index : "<<i<<endl;;
             Flag++;break;
         }
-        cout<<i;
     }
         if(Flag==0) cout<<"Key is not found"<<endl;
 }

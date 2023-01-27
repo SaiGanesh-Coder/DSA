@@ -5,7 +5,7 @@ int multi(int m,int n){
     //base case
     if(n==0) return 0;
     //recursive case
-    int smallAns = multi(m,n-1);;
+    int smallAns = multi(m,n-1);
     //calculations
     return smallAns + m;
 }

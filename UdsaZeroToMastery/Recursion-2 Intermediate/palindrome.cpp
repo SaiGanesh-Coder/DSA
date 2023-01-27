@@ -8,7 +8,6 @@ bool palindrome(int a[],int s,int e){
      }else{
         return false;
      }
-
 }
 
 int main(){
