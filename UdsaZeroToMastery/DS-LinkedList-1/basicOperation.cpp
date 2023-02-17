@@ -118,7 +118,7 @@ Node *deleteithNode(Node* head,int i){            //Memory leak is present which
         //return head->next;
         Node *newHead = head->next;
         head->next=NULL;
-        delete head;
+        delete head;                              //remove memory leak              
         return newHead;
     }
     Node* curr = head;
@@ -128,11 +128,11 @@ Node *deleteithNode(Node* head,int i){            //Memory leak is present which
         count++;
     }
     if(curr && curr->next){   
-    //curr->next = curr->next->next;
+    //curr->next = curr->next->next;              //memory leak
     Node* temp = curr->next;
     curr->next = curr->next->next;
     temp->next=NULL;
-    delete temp;
+    delete temp;                                   // remove memory leak
     return head;
     }
     return head;
