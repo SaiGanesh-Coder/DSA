@@ -15,7 +15,7 @@ void printArray(int a[],int n){
 int binarySearch(int a[],int n,int key){
         int s=0,e=n-1,mid;
         while(s<=e){
-            mid=(s+e)/2;
+            mid=s+(e-s)/2;
             if(a[mid]==key){
                 return mid;
             }
